@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Minas Home Page</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="m-0 p-0 overflow-x-hidden bg-cover bg-no-repeat bg-center bg-fixed"
+  style="background-image: url('images/image.jpg');">
+
+  <!-- Header -->
+  <div class="flex justify-center items-center py-[2vh]">
+    <a href="Home.html">
+      <img src="images/Screenshot 2024-09-08 161249.png" alt="Minas Gulal"
+        class="h-[10vh] max-w-[90%] transition-transform duration-300 ease-in-out hover:scale-125 cursor-pointer">
+    </a>
+  </div>
+
+  <!-- Navbar -->
+  <div class="flex justify-center items-center my-2 mx-5 border border-black bg-black rounded-2xl p-1 py-3">
+    <nav class="flex justify-evenly flex-wrap w-full">
+      <a href="Home.html"
+        class="text-black text-2xl bg-sky-200 px-5 py-2 rounded-full hover:bg-pink-200 hover:text-black"><b>Home</b></a>
+      <a href="Aboutus.html"
+        class="text-white text-2xl px-5 py-2 rounded-full hover:bg-pink-200 hover:text-black"><b>About
+          Us</b></a>
+      <a href="Products.html" class="text-white text-2xl px-5 py-2 rounded-full "><b>Products</b></a>
+      <a href="Contactus.html"
+        class="text-white text-2xl px-5 py-2 rounded-full hover:bg-pink-200 hover:text-black"><b>Contact
+          Us</b></a>
+    </nav>
+  </div>
+
+  <!-- Slider -->
+  <div
+    class="relative flex justify-center items-center h-[60vh] mx-[5vw] my-[2vh] border-2 border-black rounded-2xl overflow-hidden">
+    <!-- Slider Wrapper -->
+    <div id="slider" class="flex transition-transform duration-700 ease-in-out w-full h-full">
+      <img src="images/Minas Gold Poster.jpg" alt="Minas Gold" class="w-full h-full object-cover flex-shrink-0">
+      <img src="images/Romio 6 colour pouch poster.png" alt="Romio" class="w-full h-full object-cover flex-shrink-0">
+    </div>
+
+    <!-- Navigation Buttons -->
+    <button id="prev"
+      class="absolute left-2 bg-white/70 hover:bg-white text-black font-bold px-4 py-2 rounded-full">‹</button>
+    <button id="next"
+      class="absolute right-2 bg-white/70 hover:bg-white text-black font-bold px-4 py-2 rounded-full">›</button>
+  </div>
+
+  <!-- Why Minas Section -->
+  <div
+    class="bg-[#DF405E] rounded-2xl text-center text-white text-[3vh] font-semibold p-[2vh] mx-[2vw] my-[2vh] cursor-pointer transition-transform duration-300 ease-in-out hover:scale-105 flex flex-col justify-center items-center">
+    <h2 class="mb-[1vh] font-bold">&lt;---- WHY CHOOSE MINAS ----&gt;</h2>
+    <img src="images/why minas image.png" alt="" class="max-w-full h-auto rounded-lg">
+  </div>
+
+  <!-- Footer -->
+  <footer class="w-full bg-[#14213D] text-white text-center p-[2vh] box-border">
+    <h1 class="text-[3vh] mb-[1vh] font-bold">Contact Us</h1>
+    <h2 class="text-[2vh] my-[1vh]">
+      PHONE: <span class="text-[1.8vh]">99270832453, 9927082243</span>
+    </h2>
+    <h2 class="text-[2vh] my-[1vh]">
+      EMAIL: <span class="text-[1.8vh]">nationaldyestuffandchemicals@gmail.com</span>
+    </h2>
+  </footer>
+
+  <!-- JavaScript for Slider -->
+  <script>
+    const slider = document.getElementById('slider');
+    const slides = slider.children;
+    const totalSlides = slides.length;
+
+    let index = 0;
+
+    function showSlide(i) {
+      // translate slider horizontally
+      slider.style.transform = `translateX(-${i * 100}%)`;
+    }
+
+    // Next/Prev Buttons
+    document.getElementById('next').addEventListener('click', () => {
+      index = (index + 1) % totalSlides;
+      showSlide(index);
+    });
+
+    document.getElementById('prev').addEventListener('click', () => {
+      index = (index - 1 + totalSlides) % totalSlides;
+      showSlide(index);
+    });
+
+    // Auto slide every 4 seconds
+    setInterval(() => {
+      index = (index + 1) % totalSlides;
+      showSlide(index);
+    }, 2000);
+  </script>
+
+</body>
+
+</html>

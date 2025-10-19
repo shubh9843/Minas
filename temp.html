@@ -1,0 +1,87 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact Us</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="m-0 p-0 overflow-x-hidden bg-[url('image.jpg')] bg-cover bg-center bg-no-repeat bg-fixed">
+    <!-- Header -->
+    <div class="flex justify-center items-center py-4">
+        <a href="Home.html">
+            <img src="Screenshot 2024-09-08 161249.png" alt="Minas Gulal"
+                class="h-[100px] max-w-[90%] hover:scale-125 transition-transform duration-300 cursor-pointer" />
+        </a>
+    </div>
+
+    <!-- Navbar -->
+    <div
+        class="flex justify-center items-center mx-[100px] my-[10px] bg-black border border-black rounded-2xl p-2 min-h-[50px] max-md:mx-[20px]">
+        <div class="flex justify-evenly items-center w-full flex-wrap gap-2 flex-col md:flex-row">
+            <a href="Home.html"
+                class="text-white text-[25px] px-5 py-2 rounded-full hover:bg-[#FFD1DC] hover:text-black transition-all max-md:text-[18px]"><b>Home</b></a>
+            <a href="Aboutus.html"
+                class="text-white text-[25px] px-5 py-2 rounded-full hover:bg-[#FFD1DC] hover:text-black transition-all max-md:text-[18px]"><b>About
+                    Us</b></a>
+            <a href="Products.html"
+                class="text-white text-[25px] px-5 py-2 rounded-full hover:bg-[#FFD1DC] hover:text-black transition-all max-md:text-[18px]"><b>Products</b></a>
+            <a href="Contactus.html"
+                class="bg-[#CAE7FF] text-black text-[25px] px-5 py-2 rounded-full transition-all max-md:text-[18px]"><b>Contact
+                    Us</b></a>
+        </div>
+    </div>
+
+    <!-- Main Section -->
+    <div class="flex flex-wrap justify-between items-start gap-10 m-10 max-lg:gap-8 max-md:flex-col max-md:m-5">
+        <!-- Customer Form -->
+        <div class="flex-1 min-w-[300px] p-6 border-4 border-black rounded-xl bg-white/80">
+            <h2 class="text-center mb-4 text-2xl font-bold">Contact Form</h2>
+            <form action="mailto:nationaldyestuffandchemical@gmail.com" method="post" enctype="text/plain"
+                class="flex flex-col items-center gap-3">
+                <input type="text" name="Name" placeholder="Your Name" required
+                    class="w-4/5 p-3 border-2 border-black rounded-lg text-[16px]" />
+                <input type="email" name="Email" placeholder="Your Email" required
+                    class="w-4/5 p-3 border-2 border-black rounded-lg text-[16px]" />
+                <input type="tel" name="Phone" placeholder="Contact Number" required
+                    class="w-4/5 p-3 border-2 border-black rounded-lg text-[16px]" />
+                <textarea name="Message" rows="6" placeholder="Your Message"
+                    class="w-4/5 p-3 border-2 border-black rounded-lg text-[16px]"></textarea>
+                <button type="submit"
+                    class="w-1/2 bg-black text-white py-3 rounded-lg text-lg hover:bg-[#FFD1DC] hover:text-black transition">
+                    Submit
+                </button>
+            </form>
+        </div>
+
+        <!-- Office Info -->
+        <div class="flex-1 min-w-[300px] p-6 border-4 border-black rounded-xl bg-white/80">
+            <h2 class="text-[22px] font-bold mb-2">Office Address</h2>
+            <p class="text-[16px] leading-relaxed mb-4">
+                D-29, 1st Floor, <br />
+                Acharya Niketan, <br />
+                Mayur Vihar phase 1, Delhi- 110091
+            </p>
+
+            <h2 class="text-[22px] font-bold mb-2">Contact Person</h2>
+            <p class="text-[16px] leading-relaxed mb-4">
+                Sudhir Kumar Agrawal <br />
+                Rajan Dayal Agrawal
+            </p>
+
+            <h2 class="text-[22px] font-bold mb-2">Phone</h2>
+            <p class="text-[16px] leading-relaxed mb-4">
+                +91 99270 82243 <br />
+                +91 99270 83253
+            </p>
+
+            <h2 class="text-[22px] font-bold mb-2">Email</h2>
+            <p class="underline text-[16px]">
+                nationaldyestuffandchemical@gmail.com
+            </p>
+        </div>
+    </div>
+</body>
+
+</html>
